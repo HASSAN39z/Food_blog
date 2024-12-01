@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;700&family=Playfair+Display:wght@800&family=Poppins:wght@400;600;800&family=Roboto&family=Roboto+Condensed:wght@400;700&display=swap');
+
+
+/* basic */
+:root {
+    --primary-color: #202020;
+    --secondary-color: #F4F7Fc;
+    --grey: #a6a6a6;
+}
+
+html {
+    /* by default 1 rem= 16px but with this 1 rem will be = 10px */
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Mulish', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+p {
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+    letter-spacing: 1.5px;
+}
+
+h3 {
+    font-size: 2.5rem;
+    letter-spacing: 1.5px;
+}
+
+h4 {
+    font-size: 1.6rem;
+    letter-spacing: 1.5px;
+}
+
+span {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: var(--grey);
+    font-size: 1.6rem;
+    border-bottom: 2px dotted var(--primary-color);
+}
+
+.site-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* navigation */
+nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    left: 3%;
+    margin-right: 80px;
+}
+
+nav .menu a {
+    border-bottom: none;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-left: 24px;
+
+}
+
+/* .menu{
+    display: flex;
+    gap: 24px;
+    flex-direction: row;
+} */
+.mobile-menu {
+    display: none;
+}
+
+
+/* Hero section */
+
+.hero {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    position: relative;
+}
+
+.hero .left {
+    background: url(images/bg.jpg);
+    background-size: cover;
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.hero .right {
+    background-color: #c8d366;
+}
+
+.content-box span {
+    opacity: 70%;
+    /* padding-top: 30px; */
+}
+
+.hero .content-box {
+    position: absolute;
+    background-color: #fff;
+    padding: 20px;
+    width: 35%;
+    height: 200px;
+    top: 50%;
+    left: 65%;
+    transform: translate(-40%, -50%);
+}
+
+
+/* blog */
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-top: 50px;
+    grid-gap: 60px;
+}
+
+.blog {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 48px;
+}
+
+.blog .thumbnail {
+    object-fit: contain;
+}
+
+.blog-post {
+    background-color: var(--secondary-color);
+    margin: 24px 0;
+    padding: 16px;
+}
+
+.blog-content {
+    margin-top: 24px;
+}
+
+/* pagination */
+.pagination {
+    display: inline-block;
+}
+
+.pagination .active {
+    border: 1px solid var(--primary-color);
+    background-color: var(--secondary-color);
+}
+
+.pagination a {
+    color: var(--primary-color);
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 0;
+}
+
+/* aside */
+.wrapper {
+    display: flex;
+    align-items: center;
+    /* gap: 50px; */
+}
+
+.wrapper .thumb {
+    flex: 1;
+}
+
+.wrapper .content {
+    flex: 2;
+    padding: 16px;
+    /* width: 100%; */
+    /* height: 60px; */
+}
+
+.wrapper p,
+span,
+a {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+/* footer */
+footer {
+    /* width: 100%; */
+    background-color: #212124;
+    margin-top: 100px;
+    padding: 100px 50px;
+}
+
+footer h3 {
+    color: #fff;
+}
+
+footer p,
+span,
+a {
+    color: #9b9ca1;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+footer hr {
+    margin: 60px 0;
+}
+
+.footer-bottom {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-menu {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 16px;
+}
+
+.social-icons box-icon {
+    color: var(--secondary-color);
+    font-size: 16px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 50%;
+    margin-left: 8px;
+    padding: 3px;
+
+}
+
+.footer-menu ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+
+/* scroll top */
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    z-index: 99;
+    background-color: #C8D366;
+    color: #fff;
+    cursor: pointer;
+    padding: 8px 16px;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+
+    /* Basic */
+    h1 {
+        font-size: 3rem;
+    }
+
+    /* mobile menu */
+    .mobile-menu {
+        display: block;
+        font-size: 24px;
+    }
+
+    .menu {
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        z-index: 99;
+        display: none;
+
+    }
+
+    .menu a {
+        padding: 32px;
+        font-size: 18px;
+        display: block;
+        background-color: #fff;
+        width: 50%;
+        float: right;
+        border-top: 1px solid lightgray;
+    }
+
+    .show {
+        display: block;
+    }
+
+    /* hero section */
+
+    .hero {
+        left: 22px;
+        grid-template-columns: 1fr;
+    }
+
+    .hero .content-box {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 75%;
+        height: 150px;
+        background-color: #fff;
+    }
+
+    /* blog section */
+    .blog {
+        grid-template-columns: 1fr;
+    }
+
+    /* site container 2 */
+    .site-container2 {
+        width: 100%;
+        padding: 0 24px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+        justify-items: start;
+        gap: 40px;
+    }
+
+
+}
+
+ @media only screen and (max-width: 425px){
+    .hero .content-box{
+        height: 210px;
+    }
+    nav{
+        left: 9%;
+    }
+    .mobile-menu box-icon{
+        margin-top: 10px;
+    }
+}
+ 
